@@ -13,7 +13,7 @@ Part of an ongoing **Domain Unwind** series — demonstrating AI's value in help
 5. AI Governance Capability Map (Card Transactions only)
 
 
-## The Card Lifecycle — origination, capabilities & architecture
+## 1. The Card Lifecycle — origination, capabilities & architecture
  
 'The_Card_lifecycle.pptx' is the foundation piece: it maps the **account origination side** of the lifecycle, which the AI-opportunity/governance/capability decks above then build on for the transacting side.
 https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/The_Card_Lifecycle.pptx
@@ -36,7 +36,7 @@ https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/b
 - **Technical systems** mapped to each capability: CDP/campaign platform, IDV APIs, credit bureau integration, decision/underwriting engine, core banking (AMS), card management system (CMS) + HSM, real-time auth switch, batch settlement engine, fraud/AML engines, data warehouse/lakehouse + BI.
 - **Reference architecture**: a medallion lakehouse (Bronze → Silver → Gold → Serving) where both the real-time (auth, fraud scoring) and batch (settlement, statements, regulatory reporting) rhythms land in the same conformed entity model (customer, account, card, transaction) — with governance (PCI-DSS tokenization/encryption, catalog & lineage, RBAC/PII masking) cutting across every layer rather than sitting as a separate step.
 
-## Card Transaction Lifecycle, summarized
+## 2. Card Transaction Lifecycle, summarized
 
 `Settlement_Ledger_Booking_vs_Cash.pptx` is the second foundation deck: it unwinds Stage 5 (Transact) in full — five parties, two distinct events, and exactly what posts (and when) at the issuer.
 https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/Settlement_Ledger_Booking_vs_Cash.pptx
@@ -93,9 +93,7 @@ Day 0 (swipe → auth hold, memo only) → Day 0 EOD (batch closed, clearing fil
 | Chargeback reserve | Not a fee — a liability the issuer sets aside for expected dispute losses | — | — |
 
 
-
-
-## AI opportunity map (Card Transactions only)
+## 3. AI opportunity map (Card Transactions only)
 
 `AI_Card_Lifecycle_Opportunities.pptx` is the third foundation deck: For this exercise, we explored opportunities in the Card Transaction ("5. Transact" in the card lifecycle).  
 https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/AI_Card_Lifecycle_Opportunities.pptx
@@ -109,7 +107,7 @@ https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/b
 | 05 · Reporting | LLM GL commentary & natural-language query | Finance/analyst productivity |
 
 
-## Governance Control map (Card Transactions only)
+## 4. Governance Control map (Card Transactions only)
 
 `Card_AI_Governance_Considerations.pptx` is the fourth foundation deck: for the Card Transaction stage ("5. Transact" in the card lifecycle), it pairs each AI opportunity with its governance risk and key control — what has to be governed before it can be trusted in production.
 https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/Card_AI_Governance_Considerations.pptx
@@ -136,7 +134,7 @@ https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/b
 
 **Takeaway:** Every AI opportunity in this lifecycle ships with a control obligation — governance is the second half of the build.
 
-## AI Governance Capability Map (Card Transactions only)
+## 5. AI Governance Capability Map (Card Transactions only)
 
 `Card_AI_Capability_Map.pptx` is the fifth foundation deck: for each governance control above, it specifies which piece is AI-driven, what AI capability powers it (RAG, anomaly detection, XAI, classification, NLP/NER), and which piece stays a human-owned, traditional control.
 https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/Card_AI_Capability_Map.pptx
