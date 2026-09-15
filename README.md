@@ -1,9 +1,8 @@
 # # Using AI to unwind, clarify, and structure complex business and technical domains and outline AI opportunities.
 
 
-Part of an ongoing **Domain Unwind** series — demonstrating AI's value in building credible fluency in a business domain, then identifying where AI can realistically be utilized in processes, and what governing that AI actually requires.
+Part of an ongoing **Domain Unwind** series — demonstrating AI's value in helping a team working across an enterprise dataset to build credible fluency in a business domain, identifying where AI can realistically be utilized in processes, and what governing that AI actually requires.
 
-This entry unwinds the **card transaction lifecycle**: authorization, settlement/clearing, interchange & network fees, chargebacks/disputes, and issuer-side reporting & GL accounting.
 
 ## The pattern
 
