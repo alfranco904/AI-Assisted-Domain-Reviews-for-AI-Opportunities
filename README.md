@@ -136,8 +136,8 @@ https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/b
 
 ## 5. AI Governance Capability Map (Card Transactions only)
 
-`Card_AI_Capability_Map.pptx` is the fifth foundation deck: for each governance control above, it specifies which piece is AI-driven, what AI capability powers it (RAG, anomaly detection, XAI, classification, NLP/NER), and which piece stays a human-owned, traditional control.
-https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/Card_AI_Capability_Map.pptx
+`Card_AI_Governance_Capability_Map.pptx` is the fifth foundation deck: for each governance control above, it specifies which piece is AI-driven, what AI capability powers it (RAG, anomaly detection, XAI, classification, NLP/NER), and which piece stays a human-owned, traditional control.
+https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/Card_AI_Governance_Capability_Map.pptx
 
 **Every AI-driven control, its capability, and the human gate that stays in place:**
 
