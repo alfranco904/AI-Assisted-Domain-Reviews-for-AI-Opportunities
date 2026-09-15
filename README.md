@@ -166,18 +166,6 @@ https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/b
 
 Built conversationally with Claude (Sonnet 5, via Claude Code): the lifecycle mechanics and AI/governance analysis were developed through iterative Q&A, then rendered directly into the three decks above (`python-pptx`, one shared visual system across all three so they read as a set). No manual slide-building — the deck generation was scripted end-to-end from the analysis.  Review and final edits of LLM output were manually performed before loading to Github. 
 
-## What's next
-
-This is the first entry in the Domain Unwind series. Future domains follow the same three-pass structure (mechanics → AI opportunity → governance/capability), each shipping as its own folder with the same three-deck pattern.
-
-```
-domain-unwinds/
-├── card-payments/          ← this entry
-│   ├── README.md
-│   ├── AI_Card_Lifecycle_Opportunities.pptx
-│   ├── Card_AI_Governance_Considerations.pptx
-│   └── Card_AI_Capability_Map.pptx
-└── <next-domain>/
     ├── README.md
     └── ...
 ```
