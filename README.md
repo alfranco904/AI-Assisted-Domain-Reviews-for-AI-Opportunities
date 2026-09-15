@@ -14,7 +14,9 @@ Every domain in this series is unwound in three passes:
 
 ## The Card Lifecycle — origination, capabilities & architecture
 
-`The_Card_Lifecycle.pptx` is the foundation piece: it maps the **account origination side** of the lifecycle, which the AI-opportunity/governance/capability decks above then build on for the transacting side.
+https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/The_Card_Lifecycle.pptx 
+
+is the foundation piece: it maps the **account origination side** of the lifecycle, which the AI-opportunity/governance/capability decks above then build on for the transacting side.
 
 **Six stages, three processing rhythms:**
 
