@@ -107,7 +107,12 @@ https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/b
 | 04 · Chargebacks | NLP dispute classification & predictive representment | Faster cycle time, higher win rate |
 | 05 · Reporting | LLM GL commentary & natural-language query | Finance/analyst productivity |
 
-## Governance & AI capability map
+## Governance Control map (Card Transactions only)
+
+`Card_AI_Governance_Considerations.pptx` is the fourth foundation deck: For this exercise, we explored opportunities in the Card Transaction ("5. Transact" in the card lifecycle).
+This deck high level governance controls for Card transaction.
+https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/Card_AI_Governance_Considerations.pptx
+
 
 | Stage | AI-Driven Component | AI Capability | Human Gate Retained |
 |---|---|---|---|
