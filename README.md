@@ -39,6 +39,7 @@ https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/b
 
 `Settlement_Ledger_Booking_vs_Cash.pptx` is the second foundation deck: it unwinds Stage 5 (Transact) in full — five parties, two distinct events, and exactly what posts (and when) at the issuer.
 https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/Settlement_Ledger_Booking_vs_Cash.pptx
+
 **Parties:** Consumer (C) → Merchant/PSP (M) → Acquirer (A) → Network (N) → Issuer (I)
 
 **Two events, not a continuum:**
