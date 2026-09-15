@@ -13,10 +13,9 @@ Every domain in this series is unwound in three passes:
 3. **Governance** — pair every opportunity with its risk and control counterpart, and go one level deeper: which controls are *themselves* AI-driven, what AI capability powers them (RAG, classification, anomaly detection, XAI, NLP/NER), and which piece stays a human-owned gate.
 
 ## The Card Lifecycle — origination, capabilities & architecture
-
-https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/The_Card_Lifecycle.pptx 
-
-is the foundation piece: it maps the **account origination side** of the lifecycle, which the AI-opportunity/governance/capability decks above then build on for the transacting side.
+ 
+'The_Card_lifecycle.pptx' is the foundation piece: it maps the **account origination side** of the lifecycle, which the AI-opportunity/governance/capability decks above then build on for the transacting side.
+https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/The_Card_Lifecycle.pptx
 
 **Six stages, three processing rhythms:**
 
@@ -36,20 +35,63 @@ is the foundation piece: it maps the **account origination side** of the lifecyc
 - **Technical systems** mapped to each capability: CDP/campaign platform, IDV APIs, credit bureau integration, decision/underwriting engine, core banking (AMS), card management system (CMS) + HSM, real-time auth switch, batch settlement engine, fraud/AML engines, data warehouse/lakehouse + BI.
 - **Reference architecture**: a medallion lakehouse (Bronze → Silver → Gold → Serving) where both the real-time (auth, fraud scoring) and batch (settlement, statements, regulatory reporting) rhythms land in the same conformed entity model (customer, account, card, transaction) — with governance (PCI-DSS tokenization/encryption, catalog & lineage, RBAC/PII masking) cutting across every layer rather than sitting as a separate step.
 
+## Card Transaction Lifecycle, summarized
 
+`Settlement_Ledger_Booking_vs_Cash.pptx` is the second foundation deck: it unwinds Stage 5 (Transact) in full — five parties, two distinct events, and exactly what posts (and when) at the issuer.
+https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/Settlement_Ledger_Booking_vs_Cash.pptx
+**Parties:** Consumer (C) → Merchant/PSP (M) → Acquirer (A) → Network (N) → Issuer (I)
 
+**Two events, not a continuum:**
 
-## Card lifecycle, summarized
-
-**Parties:** Consumer → Merchant → Acquirer → Network (Visa/Mastercard/Amex) → Issuer
-
-| Stage | Mechanics | Issuer-side GL |
+| Event | What happens | GL impact |
 |---|---|---|
-| 01 · Authorization | Real-time approval/decline; hold placed on available balance | Memo hold only — no P&L entry yet |
-| 02 · Settlement | Batch clearing; funds actually move issuer → network → acquirer → merchant | Dr. Loan Receivable / Cr. Cash-Due-to-Network |
-| 03 · Interchange & Fees | Acquirer pays issuer interchange; both sides pay the network assessment/switch fees | Cr. Interchange Revenue / Dr. Network Fee Expense |
-| 04 · Chargebacks | Cardholder disputes; issuer reverses and pursues the acquirer/merchant | Dr. Chargeback Reserve Liability |
-| 05 · Reporting | Finance closes the books, explains variances, answers ad hoc questions | GL commentary, reconciliation, variance analysis |
+| Authorization | Auth request → fraud/credit check → approval routed back; issuer places a memo hold on available credit | None — a promise, nothing posts anywhere |
+| Settlement & clearing | Clearing file forwards Merchant → Acquirer → Network → Issuer; cash actually moves | The real financial event — four independent postings at the issuer |
+
+**Issuer's GL at settlement posting** (each row is an independent account movement, not one balanced entry):
+
+| Account | Dr/Cr | Effect |
+|---|---|---|
+| Loan Receivable (Asset) | Dr | Cardholder balance increases |
+| Merchant Payable (Liability) | Cr | Owed to network/acquirer |
+| Interchange Revenue (Income) | Cr | Recognized from the acquirer |
+| Network Fee Expense (Expense) | Dr | Reduces net margin |
+
+**At dispute/chargeback** (a separate, later event — two accounts only):
+
+| Account | Dr/Cr | Effect |
+|---|---|---|
+| Chargeback Reserve (Liability) | Cr | Set aside for expected loss |
+| Chargeback Loss Expense (Expense) | Dr | Reduces profitability |
+
+**Flow of funds — a $100.00 sale (MDR = 2.70%):** cash leaves the issuer already net of interchange, then each downstream party skims its own fee before relaying the rest.
+
+| Hop | Amount received | Fee deducted |
+|---|---|---|
+| Issuer books the receivable | $100.00 | — |
+| → Network | $98.20 | − $1.80 interchange |
+| → Acquirer | $98.10 | − $0.10 network fee |
+| → Payment System | $97.75 | − $0.35 acquirer fee |
+| → Merchant | $97.30 | − $0.45 PSP fee |
+
+**Booking vs. cash settlement:** booking happens when the clearing record posts (the receivable/payable/revenue/expense hit the GL then); cash settlement is a separate, later event — typically the next business day — when money actually moves. Cash entries only clear the payable/receivable already booked (Dr the payable to zero it out, Cr cash going out); no P&L account is touched a second time.
+
+**Settlement timeline (illustrative — actual windows vary by network/acquirer/country):**
+
+Day 0 (swipe → auth hold, memo only) → Day 0 EOD (batch closed, clearing file sent) → Day 0–1 (clearing forwarded, issuer books interchange) → Day 1 (settlement day — network moves funds issuer → acquirer) → Day 1–2 (acquirer funded) → Day 2–3 (merchant funded).
+
+**Fee glossary:**
+
+| Fee | Compensates for | Paid by | Received by |
+|---|---|---|---|
+| Interchange | Credit/fraud risk, funding the float, running the card program | Acquirer (via MDR) | Issuer |
+| Network fee | Access to the payment rails | Acquirer & Issuer | Network |
+| Acquirer fee | The acquirer's own margin | Merchant (via MDR) | Acquirer |
+| Payment system fee | The gateway/processing layer (Stripe, Square, PayPal, etc.) | Merchant (via MDR) | Payment system |
+| Chargeback reserve | Not a fee — a liability the issuer sets aside for expected dispute losses | — | — |
+
+
+
 
 ## AI opportunity map
 
