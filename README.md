@@ -107,22 +107,57 @@ https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/b
 | 04 · Chargebacks | NLP dispute classification & predictive representment | Faster cycle time, higher win rate |
 | 05 · Reporting | LLM GL commentary & natural-language query | Finance/analyst productivity |
 
-## Governance Control map (Card Transactions only)
-
-`Card_AI_Governance_Considerations.pptx` is the fourth foundation deck: For this exercise, we explored opportunities in the Card Transaction ("5. Transact" in the card lifecycle).
-This deck high level governance controls for Card transaction.
+`Card_AI_Governance_Considerations.pptx` is the fourth foundation deck: for the Card Transaction stage ("5. Transact" in the card lifecycle), it pairs each AI opportunity with its governance risk and key control — what has to be governed before it can be trusted in production.
 https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/Card_AI_Governance_Considerations.pptx
 
+**Five stages, five governance risks, one control framework:**
+
+| Stage | Governance Risk | Key Control |
+|---|---|---|
+| 01 · Authorization | Biased or unexplainable approval decisions | Model validation + fair-lending testing |
+| 02 · Settlement | Untraceable financial adjustments | Full data lineage + SOX change control |
+| 03 · Interchange | Contractual/licensing exposure on rate data | Source governance + human review gate |
+| 04 · Chargebacks | PII exposure + GenAI hallucination | Privacy controls + human-in-the-loop review |
+| 05 · Reporting | Broken access boundaries, GL misstatement | Entitlement inheritance & sign-off |
+
+**Per-stage detail:**
+
+| Stage | Governance Focus | What's required |
+|---|---|---|
+| Authorization | Explainability & fair-lending testing | Fraud/approval models require SR 11-7-style validation, independent review, and ongoing drift monitoring before production use. Decline decisions must stay explainable to satisfy adverse-action requirements under Reg B/ECOA, and be tested for disparate impact across protected classes. |
+| Settlement | Lineage & SOX-aligned change control | Anomaly-detection outputs feeding reconciliation and financial close need full lineage and audit trails back to source transaction data. Changes to settlement/reconciliation model logic fall under SOX-relevant change control since they touch financial reporting. |
+| Interchange & Fees | Licensed-data controls & review gate | Network interchange rate tables are licensed, contractual data — sourcing and refresh must be governed and version-controlled. Automated fee-recovery claims need a human review gate before submission to acquirers/networks to avoid contractual or legal exposure. |
+| Chargebacks | Human-in-the-loop before submission | Dispute correspondence and evidence contain PII/PCI data — access, retention, and sharing must follow GLBA and applicable state privacy law. GenAI-drafted representment packages carry hallucination risk and must pass human review before submission to the network. |
+| Reporting & GL | Entitlement inheritance & sign-off | Natural-language query over the transaction warehouse must inherit existing row-level entitlements — AI cannot become a backdoor around access controls. LLM-generated GL commentary requires reconciliation against source figures and human sign-off; it supports, but cannot replace, the control owner. |
+
+**Takeaway:** Every AI opportunity in this lifecycle ships with a control obligation — governance is the second half of the build.
+
+## AI Capability Map (Card Transactions only)
+
+`Card_AI_Capability_Map.pptx` is the fifth foundation deck: for each governance control above, it specifies which piece is AI-driven, what AI capability powers it (RAG, anomaly detection, XAI, classification, NLP/NER), and which piece stays a human-owned, traditional control.
+https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/Card_AI_Capability_Map.pptx
+
+**Every AI-driven control, its capability, and the human gate that stays in place:**
 
 | Stage | AI-Driven Component | AI Capability | Human Gate Retained |
 |---|---|---|---|
-| Authorization | Bias testing & reason-code explainability | XAI (SHAP/LIME) + statistical bias detection | Independent model validation & sign-off |
-| Settlement | Exception detection & root-cause triage | Anomaly detection + grounded LLM summarization | Data lineage & SOX change control |
-| Interchange | Fee-leakage / misclassification detection | Predictive classification vs. rate-table rules | Recovery-claim review gate |
-| Chargebacks | Representment package drafting | RAG (retrieval-augmented generation) + NLP/NER | Final submission approval |
-| Reporting | GL commentary & natural-language query | RAG (retrieval-augmented generation) | Entitlement inheritance & sign-off |
+| 01 · Authorization | Bias testing & reason-code explainability | XAI (SHAP/LIME) + bias detection | Independent model validation & sign-off |
+| 02 · Settlement | Exception detection & root-cause triage | Anomaly detection + LLM summarization | Data lineage & SOX change control |
+| 03 · Interchange | Fee-leakage / misclassification detection | Predictive classification | Recovery-claim review gate |
+| 04 · Chargebacks | Representment package drafting | RAG + NLP/NER | Final submission approval |
+| 05 · Reporting | GL commentary & natural-language query | RAG | Entitlement inheritance & sign-off |
 
-**Takeaway:** AI drives detection, drafting, and retrieval. Humans keep validation, review, and sign-off authority — every AI opportunity above ships with an explicit control obligation, not an implicit one.
+**Per-stage detail:**
+
+| Stage | AI-Driven | Stays Traditional/Human |
+|---|---|---|
+| Authorization | Disparate-impact testing flags approval-rate gaps across protected classes automatically; decline reason codes are generated by explainability models, not written by hand. | Independent model validation and final sign-off. |
+| Settlement | Anomaly detection scores every batch and surfaces only the outliers; root-cause narratives for flagged breaks are LLM-summarized from the transaction record. | Data lineage tracking and SOX change-control sign-off — deterministic, non-AI controls. |
+| Interchange & Fees | A classification model matches each transaction's fee against the correct network rate-table category. | Rate-table sourcing, licensing, and version control; the recovery-claim review gate stays human-owned — AI flags candidates, it doesn't authorize submission. |
+| Chargebacks | PII/PCI in dispute correspondence is detected and redacted via NLP/NER; representment packages are drafted with RAG — the model retrieves the actual network reason-code rules and prior evidence before writing, instead of generating from memory. | Final review and submission approval. |
+| Reporting & GL | Natural-language queries over the transaction warehouse use RAG — the model retrieves the actual rows/schema before answering; GL commentary generation is grounded the same way, with an automated variance check against source figures. | Entitlement inheritance and final sign-off — traditional access-control and human-review functions. |
+
+**Takeaway:** AI drives detection, drafting, and retrieval. Humans keep validation, review, and sign-off authority.
 
 ## How this was built
 
