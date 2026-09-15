@@ -132,7 +132,7 @@ https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/b
 
 **Takeaway:** Every AI opportunity in this lifecycle ships with a control obligation — governance is the second half of the build.
 
-## AI Capability Map (Card Transactions only)
+## AI Governance Capability Map (Card Transactions only)
 
 `Card_AI_Capability_Map.pptx` is the fifth foundation deck: for each governance control above, it specifies which piece is AI-driven, what AI capability powers it (RAG, anomaly detection, XAI, classification, NLP/NER), and which piece stays a human-owned, traditional control.
 https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/Card_AI_Capability_Map.pptx
