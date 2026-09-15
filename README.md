@@ -1,4 +1,5 @@
-# Domain Unwind: Card Payments
+# # Using AI to unwind, clarify, and structure complex business and technical domains and outline AI opportunities.
+
 
 Part of an ongoing **Domain Unwind** series — a repeatable pattern for building fast, credible fluency in an unfamiliar business domain, then identifying where AI can realistically change its economics, and what governing that AI actually requires.
 
