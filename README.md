@@ -12,14 +12,30 @@ Every domain in this series is unwound in three passes:
 2. **AI opportunity** — for each stage, ask where AI plausibly changes the cost, speed, or accuracy of that step — and be specific about the mechanism, not just "AI could help here."
 3. **Governance** — pair every opportunity with its risk and control counterpart, and go one level deeper: which controls are *themselves* AI-driven, what AI capability powers them (RAG, classification, anomaly detection, XAI, NLP/NER), and which piece stays a human-owned gate.
 
+## The Card Lifecycle — origination, capabilities & architecture
 
-## Deliverables
+`The_Card_Lifecycle.pptx` is the foundation piece: it maps the **account origination side** of the lifecycle, which the AI-opportunity/governance/capability decks above then build on for the transacting side.
 
-| File | What it covers |
-|---|---|
-| [`AI_Card_Lifecycle_Opportunities.pptx`](./AI_Card_Lifecycle_Opportunities.pptx) | Stage-by-stage map of where AI creates efficiency across the card lifecycle |
-| [`Card_AI_Governance_Considerations.pptx`](./Card_AI_Governance_Considerations.pptx) | The governance risk and control counterpart to each AI opportunity |
-| [`Card_AI_Capability_Map.pptx`](./Card_AI_Capability_Map.pptx) | Which controls are AI-driven vs. human-owned, and the specific AI capability behind each one |
+**Six stages, three processing rhythms:**
+
+| Stage | What happens | Rhythm |
+|---|---|---|
+| 1. Offer | Prospect identified, pre-qualified via soft credit pull | Near-real-time (origination) |
+| 2. Apply | Application submitted — identity, income, hard credit pull | Near-real-time (origination) |
+| 3. Approve | Underwriting decision, credit line & pricing assigned | Near-real-time (origination) |
+| 4. Onboard | Account + card issued, activated | Near-real-time (origination) |
+| 5. Transact | Authorization, clearing, settlement | Real-time (authorization) |
+| 6. Service | Statementing, payments, collections | Batch (servicing) |
+
+
+**Also covered:**
+- **Datasets** behind each origination stage — bureau soft/hard pulls, IDV, fraud/compliance screening, underwriting output, account/card/PAN data.
+- **Seven business-capability domains** (A–G): Customer Acquisition, Risk Decisioning, Account & Card Lifecycle, Transaction Processing, Risk & Collections, and two cross-cutting domains — Compliance/Fraud/Security and Data & Analytics — that touch every stage rather than sitting inside one.
+- **Technical systems** mapped to each capability: CDP/campaign platform, IDV APIs, credit bureau integration, decision/underwriting engine, core banking (AMS), card management system (CMS) + HSM, real-time auth switch, batch settlement engine, fraud/AML engines, data warehouse/lakehouse + BI.
+- **Reference architecture**: a medallion lakehouse (Bronze → Silver → Gold → Serving) where both the real-time (auth, fraud scoring) and batch (settlement, statements, regulatory reporting) rhythms land in the same conformed entity model (customer, account, card, transaction) — with governance (PCI-DSS tokenization/encryption, catalog & lineage, RBAC/PII masking) cutting across every layer rather than sitting as a separate step.
+
+
+
 
 ## Card lifecycle, summarized
 
