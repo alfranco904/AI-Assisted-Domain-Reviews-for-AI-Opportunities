@@ -8,11 +8,10 @@ Part of an ongoing **Domain Unwind** series — demonstrating AI's value in help
 
 Every domain in this series is unwound in three passes:
 
-1. **Mechanics** — map the end-to-end process stage by stage: who does what, what data moves, what the accounting/economics look like at each hop.
+1. **Use Case Lifecycle** — map the end-to-end process stage by stage: who does what, what data moves, what the accounting/economics look like at each hop.
 2. **AI opportunity** — for each stage, ask where AI plausibly changes the cost, speed, or accuracy of that step — and be specific about the mechanism, not just "AI could help here."
 3. **Governance** — pair every opportunity with its risk and control counterpart, and go one level deeper: which controls are *themselves* AI-driven, what AI capability powers them (RAG, classification, anomaly detection, XAI, NLP/NER), and which piece stays a human-owned gate.
 
-Each pass ships as its own deck so the mechanics, the opportunity case, and the control story can be read (and challenged) independently.
 
 ## Deliverables
 
