@@ -94,7 +94,11 @@ Day 0 (swipe → auth hold, memo only) → Day 0 EOD (batch closed, clearing fil
 
 
 
-## AI opportunity map
+## AI opportunity map (Card Transactions only)
+
+`AI_Card_Lifecycle_Opportunities.pptx` is the third foundation deck: For this exercise, we explored opportunities in the Card Transaction ("5. Transact" in the card lifecycle).  
+https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/AI_Card_Lifecycle_Opportunities.pptx
+
 
 | Stage | AI Use Case | Primary Benefit |
 |---|---|---|
