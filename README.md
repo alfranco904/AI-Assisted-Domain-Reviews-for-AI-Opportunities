@@ -99,14 +99,13 @@ Day 0 (swipe → auth hold, memo only) → Day 0 EOD (batch closed, clearing fil
 `AI_Card_Lifecycle_Opportunities.pptx` is the third foundation deck: For this exercise, we explored opportunities in the Card Transaction ("5. Transact" in the card lifecycle).  
 https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/AI_Card_Lifecycle_Opportunities.pptx
 
-
 | Stage | AI Use Case | Primary Benefit |
 |---|---|---|
-| Authorization | Real-time fraud scoring & dynamic approval thresholds | Fewer false declines, lower fraud loss, faster decisioning |
-| Settlement | Reconciliation anomaly detection & predictive cash positioning | Fewer manual exceptions, faster close |
-| Interchange | Fee-classification audit against network rate tables | Direct, recurring revenue recovery |
-| Chargebacks | NLP dispute classification, predictive representment, GenAI drafting | Weeks → days cycle time, higher win rate |
-| Reporting | LLM-generated GL commentary, natural-language warehouse query | Analyst productivity, faster finance close |
+| 01 · Authorization | Real-time fraud scoring & dynamic approvals | Risk reduction + revenue recovery |
+| 02 · Settlement | Reconciliation anomaly detection | Lower ops cost, faster close |
+| 03 · Interchange | Fee audit & leakage detection | Direct revenue recovery |
+| 04 · Chargebacks | NLP dispute classification & predictive representment | Faster cycle time, higher win rate |
+| 05 · Reporting | LLM GL commentary & natural-language query | Finance/analyst productivity |
 
 ## Governance & AI capability map
 
