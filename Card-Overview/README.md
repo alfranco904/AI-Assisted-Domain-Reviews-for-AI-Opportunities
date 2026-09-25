@@ -16,7 +16,7 @@ Part of an ongoing **Domain Decomposition** series — demonstrating AI's value 
 ## 1. The Card Lifecycle — origination, capabilities & architecture
  
 'The_Card_Lifecycle.pptx' is the foundation piece: it maps the **account origination side** of the lifecycle, which the AI-opportunity/governance/capability decks below then build on for the transacting side.
-https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/The_Card_Lifecycle.pptx
+https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/Card-Overview/The_Card_Lifecycle.pptx
 
 **Six stages, three processing rhythms:**
 
@@ -39,7 +39,7 @@ https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/b
 ## 2. Card Transaction Lifecycle, summarized
 
 `Settlement_Ledger_Booking_vs_Cash.pptx` is the second foundation deck: it unwinds Stage 5 (Transact) in full — five parties, two distinct events, and exactly what posts (and when) at the issuer.
-https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/Settlement_Ledger_Booking_vs_Cash.pptx
+https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/Card-Overview/Settlement_Ledger_Booking_vs_Cash.pptx
 
 **Parties:** Consumer (C) → Merchant/PSP (M) → Acquirer (A) → Network (N) → Issuer (I)
 
@@ -96,7 +96,7 @@ Day 0 (swipe → auth hold, memo only) → Day 0 EOD (batch closed, clearing fil
 ## 3. AI opportunity map (Card Transactions only)
 
 `AI_Card_Lifecycle_Opportunities.pptx` is the third foundation deck: For this exercise, we explored opportunities in the Card Transaction ("5. Transact" in the card lifecycle).  
-https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/AI_Card_Lifecycle_Opportunities.pptx
+https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/Card-Overview/AI_Card_Lifecycle_Opportunities.pptx
 
 | Stage | AI Use Case | Primary Benefit |
 |---|---|---|
@@ -110,7 +110,7 @@ https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/b
 ## 4. Governance Control map (Card Transactions only)
 
 `Card_AI_Governance_Considerations.pptx` is the fourth foundation deck: for the Card Transaction stage ("5. Transact" in the card lifecycle), it pairs each AI opportunity with its governance risk and key control — what has to be governed before it can be trusted in production.
-https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/Card_AI_Governance_Considerations.pptx
+https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/Card-Overview/Card_AI_Governance_Considerations.pptx
 
 **Five stages, five governance risks, one control framework:**
 
@@ -137,7 +137,7 @@ https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/b
 ## 5. AI Governance Capability Map (Card Transactions only)
 
 `Card_AI_Governance_Capability_Map.pptx` is the fifth foundation deck: for each governance control above, it specifies which piece is AI-driven, what AI capability powers it (RAG, anomaly detection, XAI, classification, NLP/NER), and which piece stays a human-owned, traditional control.
-https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/Card_AI_Governance_Capability_Map.pptx
+https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/Card-Overview/Card_AI_Governance_Capability_Map.pptx
 
 **Every AI-driven control, its capability, and the human gate that stays in place:**
 
