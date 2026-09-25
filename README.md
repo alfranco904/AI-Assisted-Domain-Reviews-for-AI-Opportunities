@@ -38,7 +38,7 @@ Consumer Lending extends the pattern with a fourth pass: **build.** A complete r
 | # | Deck | Slides | The question it answers |
 |---|---|---|---|
 | **Part 1 · Understand the flow** ||||
-| 1 | [`Consumer_Lending_Data_Flow_Overview.pptx`](./Consumer_Lending_Data_Flow_Overview.pptx) | 17 | How does a loan's data travel from application to the financial statements? |
+| 1 | [`Consumer_Lending_Data_Flow_Overview.pptx`](https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/Card-Overview/Consumer_Lending_Data_Flow_Overview.pptx) | 17 | How does a loan's data travel from application to the financial statements? |
 | 2 | [`Subledger_to_GL_Reconciliation.pptx`](./Subledger_to_GL_Reconciliation.pptx) | 13 | How do loan-level records become the official books, and how are they proven to agree? |
 | **Part 2 · Govern it** ||||
 | 3 | [`Consumer_Lending_Data_Governance.pptx`](./Consumer_Lending_Data_Governance.pptx) | 18 | What makes lending data trustworthy enough to sign? |
