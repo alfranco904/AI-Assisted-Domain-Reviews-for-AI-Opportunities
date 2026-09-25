@@ -38,18 +38,18 @@ Consumer Lending extends the pattern with a fourth pass: **build.** A complete r
 | # | Deck | Slides | The question it answers |
 |---|---|---|---|
 | **Part 1 · Understand the flow** ||||
-| 1 | [`Consumer_Lending_Data_Flow_Overview.pptx`](./Consumer_Lending_Data_Flow_Overview.pptx) | 17 | How does a loan's data travel from application to the financial statements? |
+| 1 | [`Consumer_Lending_Data_Flow_Overview.pptx`](https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/Consumer-Lending-Overview/Consumer_Lending_Data_Flow_Overview.pptx) | 17 | How does a loan's data travel from application to the financial statements? |
 | 2 | [`Subledger_to_GL_Reconciliation.pptx`](./Subledger_to_GL_Reconciliation.pptx) | 13 | How do loan-level records become the official books, and how are they proven to agree? |
 | **Part 2 · Govern it** ||||
-| 3 | [`Consumer_Lending_Data_Governance.pptx`](./Consumer_Lending_Data_Governance.pptx) | 18 | What makes lending data trustworthy enough to sign? |
-| 4 | [`Data_Governance_Policies_Executive_Overview.pptx`](./Data_Governance_Policies_Executive_Overview.pptx) | 23 | What rules does the firm set, and how are they enforced? |
-| 5 | [`Establishing_a_Data_Governance_Office.pptx`](./Establishing_a_Data_Governance_Office.pptx) | 27 | What organization runs governance, and how is it stood up? |
+| 3 | [`Consumer_Lending_Data_Governance.pptx`](https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/Consumer-Lending-Overview/Consumer_Lending_Data_Governance.pptx) | 18 | What makes lending data trustworthy enough to sign? |
+| 4 | [`Data_Governance_Policies_Executive_Overview.pptx`](https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/Consumer-Lending-Overview/Data_Governance_Policies_Executive_Overview.pptx) | 23 | What rules does the firm set, and how are they enforced? |
+| 5 | [`Establishing_a_Data_Governance_Office.pptx`](https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/Consumer-Lending-Overview/Establishing_a_Data_Governance_Office.pptx) | 27 | What organization runs governance, and how is it stood up? |
 | **Part 3 · Make it trustworthy, at scale** ||||
-| 6 | [`Consumer_Lending_Data_Quality_Checks.pptx`](./Consumer_Lending_Data_Quality_Checks.pptx) | 17 | What checks prove the data is right, and where should they run? |
-| 7 | [`AI_for_Data_Quality_Operations.pptx`](./AI_for_Data_Quality_Operations.pptx) | 34 | Where can AI make data quality faster and wider-reaching, safely? |
+| 6 | [`Consumer_Lending_Data_Quality_Checks.pptx`](https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/Consumer-Lending-Overview/Consumer_Lending_Data_Quality_Checks.pptx) | 17 | What checks prove the data is right, and where should they run? |
+| 7 | [`AI_for_Data_Quality_Operations.pptx`](https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/Consumer-Lending-Overview/AI_for_Data_Quality_Operations.pptx) | 34 | Where can AI make data quality faster and wider-reaching, safely? |
 | **Part 4 · Build it** ||||
-| 8 | [`Consumer_Lending_Medallion_Data_Model.pptx`](./Consumer_Lending_Medallion_Data_Model.pptx) | 40 | What data model serves all the reporting, from raw source to certified report? |
-| 9 | [`Claude_Client_Data_Model_Implementation_Blueprint.pptx`](./Claude_Client_Data_Model_Implementation_Blueprint.pptx) | 24 | How would we implement that model at a client, with AI assistance, safely? |
+| 8 | [`Consumer_Lending_Medallion_Data_Model.pptx`](https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/Consumer-Lending-Overview/Consumer_Lending_Medallion_Data_Model.pptx) | 40 | What data model serves all the reporting, from raw source to certified report? |
+| 9 | [`Claude_Client_Data_Model_Implementation_Blueprint.pptx`](https://github.com/alfranco904/AI-Assisted-Domain-Reviews-for-AI-Opportunities/blob/main/Consumer-Lending-Overview/Claude_Client_Data_Model_Implementation_Blueprint.pptx) | 24 | How would we implement that model at a client, with AI assistance, safely? |
 
 ---
 
